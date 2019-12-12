@@ -34,6 +34,7 @@ function getThumbsRating(ratings) {
             return none;
         }
   }
+
 getThumbsRating(ratings);
 console.log(getThumbsRating(ratings));
 
@@ -43,7 +44,31 @@ console.log(getThumbsRating(ratings));
 const storeSet1 = [{sales: 123411, area: 1234}, {sales: 5026107, area: 20712}, {sales: 23121, area: 901}, {sales: 4121928, area: 4993}];
 const storeSet2 = [{sales: 123411, area: 1234}];
 const storeSet3 = [{sales: 123411, area: 1234}, {sales: 123411, area: 1234}];
+let allSpua = [];
 
 function getNearestCompetingStore(stores) {
-  return [];
+    if (stores.length > 1) {
+        stores.forEach( (store) => {
+            store.spua = store.sales / store.area;
+        })
+        stores.forEach( (store) => {
+            allSpua.push(store.spua);
+        })
+        stores.sort((a, b) => (a.spua > b.spua) ? 1 : -1)
+        if (stores[0].spua != stores[1].spua) {
+            return [stores[0], stores[1]];
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
 }
+
+getNearestCompetingStore(storeSet1);
+getNearestCompetingStore(storeSet2);
+getNearestCompetingStore(storeSet3);
+
+console.log(getNearestCompetingStore(storeSet1));
+console.log(getNearestCompetingStore(storeSet2));
+console.log(getNearestCompetingStore(storeSet3));
