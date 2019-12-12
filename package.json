@@ -1,0 +1,11 @@
+{
+  "name": "javascript-sample-prompt",
+  "version": "1.0.0",
+  "description": "Javascript practice prompts provided by Daugherty",
+  "main": "main.js",
+  "scripts": {
+    "test": "none"
+  },
+  "author": "",
+  "license": "ISC"
+}
