@@ -1,11 +1,14 @@
+// Prompt 1 
+
+// Variable declration
+// To test different ratings, comment/uncomment which array you want to test
+
 let ratings = [];
 //let ratings = [-1,1,1,1];
 //let ratings = [-1,1,-1,-1,-1];
 //let ratings = [-1,-1,1,1];
 //let ratings = [1,1,1,1,1];
 
-
-// Prompt 1
 function getThumbsRating(ratings) {
     const up = "👍";
     const down = "👎";
@@ -33,3 +36,14 @@ function getThumbsRating(ratings) {
   }
 getThumbsRating(ratings);
 console.log(getThumbsRating(ratings));
+
+// Prompt 2
+
+// Variable declaration
+const storeSet1 = [{sales: 123411, area: 1234}, {sales: 5026107, area: 20712}, {sales: 23121, area: 901}, {sales: 4121928, area: 4993}];
+const storeSet2 = [{sales: 123411, area: 1234}];
+const storeSet3 = [{sales: 123411, area: 1234}, {sales: 123411, area: 1234}];
+
+function getNearestCompetingStore(stores) {
+  return [];
+}
